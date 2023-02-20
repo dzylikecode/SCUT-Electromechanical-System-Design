@@ -232,12 +232,12 @@ $$W \approx P / \theta$$
 - 旋转变压器：旋转变压器是一种**输出电压随转角变化的角位移测量装置**。它的结构通常做成**两极电机**的形式，其定子、转子均由硅钢片迭压而成，定子和转子上各有两套在空间上完全**正交**的绕组。旋转变压器的工作原理与普通变压器相似，区别在于普通变压器的原边、副边绕组是相对固定的，所以输出电压和输入电压之比是常数，而旋转变压器的**原边、副边绕组则随转子的角位移发生相对位置的改变**，因而其输出电压的大小随转子角位移而发生变化，输出绕组的电压幅值与转子转角成正弦、余弦函数关系，或保持某一比例关系，或在一定转角范围内与转角成线性关系。
 
 $$
-\begin{cases}
-u_{W1} = U_m \sin\omega t \\
-u_{W2} = U_m \cos\omega t \\
-u_{R1} = m(u_{W1}\sin\theta + u_{W2} \cos\theta) \\
-u_{R2} = m(u_{W1}\cos\theta - u_{W2} \sin\theta) \\
-\end{cases}
+\begin{aligned}
+&u_{W1} = U_m \sin\omega t \\
+&u_{W2} = U_m \cos\omega t \\
+&u_{R1} = m(u_{W1}\sin\theta + u_{W2} \cos\theta) \\
+&u_{R2} = m(u_{W1}\cos\theta - u_{W2} \sin\theta) \\
+\end{aligned}
 $$
 
 > 这里有疑惑，为什么是减
@@ -294,16 +294,16 @@ $$\rho=\frac{2t_{on}}{T}-1$$
 25. 直流伺服电机微分方程推导。`（*****）`
 
 $$
-\begin{cases}{1}
-T = k_m i_d  \\
-E_e = k_e \omega \\
-U_d = E_e + R_a i_d + L_a \frac{\mathrm{d}i_d}{\mathrm{d}t} \\
-T - T_L = J \frac{\mathrm{d}\omega}{\mathrm{d}t} \\
-U_d = E_e + R_a \frac{T}{k_m} + L_a \frac{\mathrm{d}T}{k_m\mathrm{d}t} \\
-U_d = E_e + R_a \frac{T_L + J \frac{\mathrm{d}\omega}{\mathrm{d}t}}{k_m} + \frac{L_a}{k_m} \frac{\mathrm{d}(T_L + J \frac{\mathrm{d}\omega}{\mathrm{d}t})}{\mathrm{d}t} \\
-U_d = k_e \omega +  \frac{R_a T_L}{k_m} + \frac{R_a J}{k_m} \frac{\mathrm{d} \omega}{\mathrm{d}t} + \frac{L_a}{k_m}\frac{\mathrm{d}T_L }{\mathrm{d}t} + \frac{J L_a}{k_m} \frac{\mathrm{d}^2\omega}{\mathrm{d}t^2} \\
-\frac{L_a J}{k_e k_m} \frac{\mathrm{d}^2\omega}{\mathrm{d}t^2} + \frac{R_a J}{k_e k_m} \frac{\mathrm{d} \omega}{\mathrm{d}t} + \omega = \frac{1}{k_e} U_d - \frac{L_a}{k_e k_m}\frac{\mathrm{d}T_L }{\mathrm{d}t} - \frac{R_a}{k_e k_m}T_L\\
-\end{cases}
+\begin{aligned}
+&T = k_m i_d  \\
+&E_e = k_e \omega \\
+&U_d = E_e + R_a i_d + L_a \frac{\mathrm{d}i_d}{\mathrm{d}t} \\
+&T - T_L = J \frac{\mathrm{d}\omega}{\mathrm{d}t} \\
+&U_d = E_e + R_a \frac{T}{k_m} + L_a \frac{\mathrm{d}T}{k_m\mathrm{d}t} \\
+&U_d = E_e + R_a \frac{T_L + J \frac{\mathrm{d}\omega}{\mathrm{d}t}}{k_m} + \frac{L_a}{k_m} \frac{\mathrm{d}(T_L + J \frac{\mathrm{d}\omega}{\mathrm{d}t})}{\mathrm{d}t} \\
+&U_d = k_e \omega +  \frac{R_a T_L}{k_m} + \frac{R_a J}{k_m} \frac{\mathrm{d} \omega}{\mathrm{d}t} + \frac{L_a}{k_m}\frac{\mathrm{d}T_L }{\mathrm{d}t} + \frac{J L_a}{k_m} \frac{\mathrm{d}^2\omega}{\mathrm{d}t^2} \\
+&\frac{L_a J}{k_e k_m} \frac{\mathrm{d}^2\omega}{\mathrm{d}t^2} + \frac{R_a J}{k_e k_m} \frac{\mathrm{d} \omega}{\mathrm{d}t} + \omega = \frac{1}{k_e} U_d - \frac{L_a}{k_e k_m}\frac{\mathrm{d}T_L }{\mathrm{d}t} - \frac{R_a}{k_e k_m}T_L\\
+\end{aligned}
 $$
 
 26. 交流异步电机转速方程，变频调速原理及特性（基频以下恒磁通（恒转矩）调速、基频以上恒功率调速）。`（*****）`

@@ -39,3 +39,23 @@ structure:
 ---
 
 Moiré pattern. (2023, February 16). In Wikipedia. https://en.wikipedia.org/wiki/Moir%C3%A9_pattern
+
+---
+
+光电编码器的计算
+
+一圈多少脉冲
+
+---
+
+异步电机
+
+转动最小的角度, 达到平衡
+
+---
+
+一台反应式步进电机，通过一对减速齿轮，滚珠丝杠带动工作台，步进电机转子有 24 个齿，采用 3 相 6 拍通电，并设步进电机每走一步工作台移动 7.5 μm。当丝杠导程 $P_h=4 mm$，齿轮 1 的齿数 $z_1=27$ 时，试求齿轮 2 的齿数 $z_2$.
+
+$$\alpha = \frac{360^\circ}{mkz}=\frac{360^\circ}{3 \times 2 \times 24} = 2.5^\circ$$
+
+$$i = \frac{Z_2}{Z_1} = \frac{\alpha P_h}{360^\circ \delta} = \frac{2.5^\circ \times 4}{360^\circ \times 0.0075} = \frac{100}{27}$$
